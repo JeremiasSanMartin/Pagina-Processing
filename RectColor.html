@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="processing.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Rectangulo que cambia de color</title>
+</head>
+<body background="https://c.wallhere.com/photos/23/99/texture_pattern_black_line_surface-684336.jpg!d" >
+    <H1><center><u> <FONT face="Times New Roman" size="10" COLOR="#008080" >Triangulo que cambia de color</FONT> </u> </center> </H1>
+    <div id="header">
+      <ul class="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="">Colores</a>
+          <ul>
+            <li><a href="LineaColor.html">Linea</a></li>
+            <li><a href="RectColor.html">Triangulo</a></li>
+            <li><a href="Iniciales.html">Iniciales</a></li>
+            </li>
+          </ul>
+        </li>
+        <li><a href="">Control</a>
+          <ul>
+            <li><a href="ImagenMove.html">Imagen</a></li>
+            <li><a href="Pong.html">Pong</a></li>
+          </ul>
+        </li>
+        <li><a href="">Animacion</a>
+        <ul>
+          <li><a href="Animacion.html">Personaje</a></li>
+        </li>
+        </ul>
+      </ul>
+    </div>
+    
+    <center><script type="text/processing">
+    int R = 0;
+int G = 0;
+int B = 0;
+int P = 0;
+void setup(){
+  
+size(640,360);
+
+}
+
+void draw(){
+
+  triangle(200,100,100,300,300,300);
+  fill(R,G,B);
+  if (P == 0){
+  R= R+5;
+  if (R==255){
+    P = 1;
+  }
+  }
+  if( P == 1){
+  R= R-5;
+    if(R == 0){
+  P= 2;
+  }
+  }
+  if (P==2){
+G= G+5;
+if(G==255){
+P=3;
+}
+}
+if(P==3){
+G= G-5;
+if(G==0){
+P= 4;
+}
+}
+
+
+if (P==4){
+B= B+5;
+if(B==255){
+P=5;
+}
+}
+if(P==5){
+B= B-5;
+if(B==0){
+P= 0;
+}
+}
+  
+  
+}
+</script>
+<canvas></canvas>
+</center>
+</body>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="processing.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Rectangulo que cambia de color</title>
+</head>
+<body background="https://c.wallhere.com/photos/23/99/texture_pattern_black_line_surface-684336.jpg!d" >
+    <H1><center><u> <FONT face="Times New Roman" size="10" COLOR="#008080" >Iniciales con lineas</FONT> </u> </center> </H1>
+    <div id="header">
+        <ul class="nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="">Colores</a>
+            <ul>
+              <li><a href="LineaColor.html">Linea</a></li>
+              <li><a href="RectColor.html">Triangulo</a></li>
+              <li><a href="Iniciales.html">Iniciales</a></li>
+              </li>
+            </ul>
+          </li>
+          <li><a href="">Control</a>
+            <ul>
+              <li><a href="ImagenMove.html">Imagen</a></li>
+              <li><a href="Pong.html">Pong</a></li>
+            </ul>
+          </li>
+          <li><a href="">Animacion</a>
+          <ul>
+            <li><a href="Animacion.html">Personaje</a></li>
+          </li>
+          </ul>
+        </ul>
+      </div>
+      
+    <center><script type="text/processing">
+        void setup(){
+            size(500,300);
+          }
+          void draw(){
+          background(255);
+          line(50,30,150,30);
+          line(100,30,100,150);
+          line(100,150,50,150);
+          line(50,150,50,130);
+          
+          line(250,30,300,30);
+          line(300,30,300,40);
+          line(250,30,250,70);
+          line(250,70,300,70);
+          line(300,70,300,120);
+          line(250,120,300,120);
+          line(250,120,250,110);
+          }
+</script>
+<canvas></canvas>
+</center>
+</body>
